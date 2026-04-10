@@ -1,5 +1,2 @@
 # calculadoraimc
-....
-# calculadoraimc
-# imc
-# imc
+
