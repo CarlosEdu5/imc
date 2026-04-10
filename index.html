@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>JavaScript</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header class="titulo">
+      <h1>Calculadora de IMC</h1>
+    </header>
+    <div class="descricao">
+      <p>Aqui você pode calcular o seu Índice de Massa Corporal (IMC)</p>
+    </div>
+
+    <section class="calculadora">
+      
+      <p id="dados">Digite seu peso (kg):</p>
+      <input
+        type="text"
+        placeholder="Digite aqui"
+        id="peso"><br>
+
+      <p id="dados">Digite sua altura (cm):</p>
+      <input
+        type="text"
+        placeholder="Digite aqui"
+        id="altura"><br>
+
+      <input type="button" value="Calcular IMC" id="calcular"><br>
+
+      <span class="resultado" align="right">
+        <p id="dados">seu IMC é:</p>
+        <p id="resultado1"></p>
+      </span>
+    </section>
+    <script src="script.js"></script>
+  </body>
+</html>
