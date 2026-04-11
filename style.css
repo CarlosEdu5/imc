@@ -4,6 +4,7 @@ body {
     background-color: #c59b3b;
     margin: 0;
     padding: 20px;
+    overflow: hidden;
 }
 
 .calculadora {
@@ -38,6 +39,7 @@ body {
     left: 70px;
     font-size: 30px;
     font-weight: bold;
+    inline-size: 330px;
 }
 
 #peso {
@@ -89,12 +91,26 @@ body {
 
 .resultado {
     position: relative;
-    right: 180px;
-    bottom: 352px;
+    left: 730px;
+    bottom: 440px;
+    inline-size: 300px;
+    text-align: center;
 }
 
 #resultado1 {
-    font-size: 30px;
+    font-size: 50px;
+    position: relative;
+    top: -38px;
+    left: 77px;
     font-weight: bold;
     color: #c59b3b;
+}
+
+#resultado2 {
+    font-size: 30px;
+    position: relative;
+    top: 35px;
+    left: 75px;
+    font-weight: bold;
+    color: #000000;
 }

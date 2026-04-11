@@ -16,25 +16,30 @@
 
     <section class="calculadora">
       
-      <p id="dados">Digite seu peso (kg):</p>
-      <input
-        type="text"
-        placeholder="Digite aqui"
-        id="peso"><br>
-
       <p id="dados">Digite sua altura (cm):</p>
       <input
         type="text"
+        value=""
         placeholder="Digite aqui"
         id="altura"><br>
 
+      <p id="dados">Digite seu peso (kg):</p>
+      <input
+        type="text"
+        value=""
+        placeholder="Digite aqui"
+        id="peso"><br>
+
       <input type="button" value="Calcular IMC" id="calcular"><br>
 
-      <span class="resultado" align="right">
-        <p id="dados">seu IMC é:</p>
-        <p id="resultado1"></p>
-      </span>
     </section>
+
+    <div class="resultado">
+      <p id="dados">Seu IMC é:</p>
+      <p id="resultado1"></p><br>
+      <p id="resultado2"></p>
+    </div>
+
     <script src="script.js"></script>
   </body>
 </html>
