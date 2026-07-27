@@ -1,45 +1,116 @@
 <!doctype html>
 <html lang="pt-br">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>JavaScript</title>
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
-    <header class="titulo">
-      <h1>Calculadora de IMC</h1>
-    </header>
-    <div class="descricao">
-      <p>Aqui você pode calcular o seu Índice de Massa Corporal (IMC)</p>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Calculadora de IMC</title>
+  <link rel="stylesheet" href="src/style/style.css">
+</head>
+<body>
+
+  <div class="container">
+
+    <div class="cabecalho">
+      <div class="icone-azul">📊</div>
+      <div>
+        <h1>Calculadora de IMC</h1>
+        <p>Descubra seu Índice de Massa Corporal</p>
+      </div>
     </div>
 
-    <section class="calculadora">
-      
-      <p id="dados">Digite sua altura (cm):</p>
-      <input
-        type="text"
-        value=""
-        placeholder="Digite aqui"
-        id="altura"><br>
+    <div class="colunas">
 
-      <p id="dados">Digite seu peso (kg):</p>
-      <input
-        type="text"
-        value=""
-        placeholder="Digite aqui"
-        id="peso"><br>
+      <div class="caixa caixa-dados">
+        <h2 class="titulo-caixa">👤 Seus dados</h2>
 
-      <input type="button" value="Calcular IMC" id="calcular"><br>
+        <label for="peso">Peso</label>
+        <div class="campo">
+          <input type="number" id="peso" placeholder="Digite seu peso">
+          <span>kg</span>
+        </div>
+        <p class="dica">Digite seu peso em quilogramas</p>
 
-    </section>
+        <label for="altura">Altura</label>
+        <div class="campo">
+          <input type="number" id="altura" placeholder="Digite sua altura">
+          <span>m</span>
+        </div>
+        <p class="dica">Digite sua altura em metros</p>
 
-    <div class="resultado">
-      <p id="dados">Seu IMC é:</p>
-      <p id="resultado1"></p><br>
-      <p id="resultado2"></p>
+        <label for="idade">Idade (opcional)</label>
+        <div class="campo">
+          <input type="number" id="idade" placeholder="Digite sua idade">
+          <span>anos</span>
+        </div>
+        <p class="dica">Informação opcional</p>
+
+        <button class="botao-calcular">Calcular meu IMC</button>
+
+        <p class="aviso">🔒 Seus dados não são armazenados ou compartilhados.</p>
+      </div>
+
+      <div class="caixa caixa-resultado">
+        <h2 class="titulo-caixa">📈 Seu resultado</h2>
+
+        <div class="gauge">
+          <span>--</span>
+        </div>
+
+        <p class="mensagem-resultado">Preencha seus dados e clique em "Calcular meu IMC" para ver o resultado.</p>
+
+        <h3 class="classificacao-titulo">Classificação do IMC (OMS)</h3>
+        <div class="tabela-classificacao">
+          <div class="faixa" id="cor-1">
+            <strong id="strong-1">&lt; 18,5
+            Abaixo do peso</strong>
+          </div>
+          <div class="faixa" id="cor-2">
+            <strong id="strong-2">18,5 - 24,9
+            Peso normal</strong>
+          </div>
+          <div class="faixa" id="cor-3">
+            <strong id="strong-3">25 - 29,9
+            Sobrepeso</strong>
+          </div>
+          <div class="faixa" id="cor-4">
+            <strong id="strong-4">30 - 34,9
+            Obesidade I</strong>
+          </div>
+          <div class="faixa" id="cor-5">
+            <strong id="strong-5">35 - 39,9
+            Obesidade II</strong>
+          </div>
+          <div class="faixa" id="cor-6">
+            <strong id="strong-6">&ge; 40
+            Obesidade III</strong>
+          </div>
+        </div>
+
+        <p class="fonte">Fonte: Organização Mundial da Saúde (OMS)</p>
+      </div>
+
     </div>
 
-    <script src="script.js"></script>
-  </body>
+    <div class="rodape">
+      <div class="dica-rodape">
+        <strong>🏋️ Exercite-se</strong>
+        <p>Atividades físicas fazem bem!</p>
+      </div>
+      <div class="dica-rodape">
+        <strong>🍎 Alimente-se bem</strong>
+        <p>Escolhas saudáveis transformam!</p>
+      </div>
+      <div class="dica-rodape">
+        <strong>🌙 Durma bem</strong>
+        <p>Uma boa noite de sono é essencial!</p>
+      </div>
+      <div class="dica-rodape">
+        <strong>❤️ Cuide de você</strong>
+        <p>Pequenas mudanças geram grandes resultados!</p>
+      </div>
+    </div>
+
+  </div>
+
+</body>
 </html>
