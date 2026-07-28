@@ -1,6 +1,6 @@
 function CalcularIMC() {
-  var peso = document.getElementById("peso").value.replace(',', '.');
-  var altura = document.getElementById("altura").value.replace(',', '.');
+  var peso = document.getElementById("peso").value.replace(",", ".");
+  var altura = document.getElementById("altura").value.replace(",", ".");
 
   peso = parseFloat(peso);
   altura = parseFloat(altura);
@@ -8,6 +8,36 @@ function CalcularIMC() {
   altura = altura / 100;
 
   var imc = peso / (altura * altura);
+
+  var imcMin = 10;
+  var imcMax = 45;
+
+  var porcentagem = (imc - imcMin) / (imcMax - imcMin);
+
+  porcentagem = Math.max(0, Math.min(1, porcentagem));
+
+  var arcoTotal = 414.7;
+  var offset = arcoTotal - arcoTotal * porcentagem;
+
+  document
+    .getElementById("arco-progresso")
+    .setAttribute("stroke-dashoffset", offset);
+
+    let cor = "#22c55e";
+
+if (imc < 18.5) {
+    cor = "#3b82f6";
+} else if (imc < 25) {
+    cor = "#22c55e";
+} else if (imc < 30) {
+    cor = "#eab308";
+} else if (imc < 35) {
+    cor = "#f97316";
+} else {
+    cor = "#ef4444";
+}
+
+document.getElementById("arco-progresso").setAttribute("stroke", cor);
 
   var classificacao = "";
 
@@ -30,7 +60,22 @@ function CalcularIMC() {
   }
 
   document.getElementById("resultado1").innerHTML = imc.toFixed(2) + "<br>";
-  document.getElementById("resultado2").innerHTML = classificacao;
 }
 
 document.getElementById("calcular").addEventListener("click", CalcularIMC);
+
+let cor = "#22c55e";
+
+if (imc < 18.5) {
+    cor = "#3b82f6";
+} else if (imc < 25) {
+    cor = "#22c55e";
+} else if (imc < 30) {
+    cor = "#eab308";
+} else if (imc < 35) {
+    cor = "#f97316";
+} else {
+    cor = "#ef4444";
+}
+
+document.getElementById("arco-progresso").setAttribute("stroke", cor);
