@@ -23,21 +23,21 @@ function CalcularIMC() {
     .getElementById("arco-progresso")
     .setAttribute("stroke-dashoffset", offset);
 
-    let cor = "#22c55e";
+  let cor = "#22c55e";
 
-if (imc < 18.5) {
+  if (imc < 18.5) {
     cor = "#3b82f6";
-} else if (imc < 25) {
+  } else if (imc < 25) {
     cor = "#22c55e";
-} else if (imc < 30) {
+  } else if (imc < 30) {
     cor = "#eab308";
-} else if (imc < 35) {
+  } else if (imc < 35) {
     cor = "#f97316";
-} else {
+  } else {
     cor = "#ef4444";
-}
+  }
 
-document.getElementById("arco-progresso").setAttribute("stroke", cor);
+  document.getElementById("arco-progresso").setAttribute("stroke", cor);
 
   var classificacao = "";
 
@@ -59,23 +59,31 @@ document.getElementById("arco-progresso").setAttribute("stroke", cor);
     classificacao = "Obesidade grau III";
   }
 
-  document.getElementById("resultado1").innerHTML = imc.toFixed(2) + "<br>";
+  function animarNumero(valorFinal) {
+    const elemento = document.getElementById("resultado1");
+
+    let atual = 0;
+
+    const duracao = 1000;
+
+    const fps = 60;
+
+    const incremento = valorFinal / (duracao / (1000 / fps));
+
+    const intervalo = setInterval(() => {
+      atual += incremento;
+
+      if (atual >= valorFinal) {
+        atual = valorFinal;
+
+        clearInterval(intervalo);
+      }
+
+      elemento.innerHTML = atual.toFixed(2);
+    }, 1000 / fps);
+  }
+
+  animarNumero(imc);
 }
 
 document.getElementById("calcular").addEventListener("click", CalcularIMC);
-
-let cor = "#22c55e";
-
-if (imc < 18.5) {
-    cor = "#3b82f6";
-} else if (imc < 25) {
-    cor = "#22c55e";
-} else if (imc < 30) {
-    cor = "#eab308";
-} else if (imc < 35) {
-    cor = "#f97316";
-} else {
-    cor = "#ef4444";
-}
-
-document.getElementById("arco-progresso").setAttribute("stroke", cor);
