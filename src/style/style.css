@@ -154,10 +154,9 @@
     }
  
     .gauge {
-      width: 174px;
-      height: 174px;
-      border: 12px solid #e2e8f0;
-      border-radius: 50%;
+      width: 200px;
+      height: 200px;
+      position: relative;
       display: flex;
       justify-content: center;
       align-items: center;
@@ -188,6 +187,7 @@
       gap: 6px;
       flex-wrap: wrap;
       margin-bottom: 6px;
+      align-items: center;
     }
  
     .faixa {
@@ -195,6 +195,7 @@
       min-width: 80px;
       border-radius: 8px;
       padding: 6px;
+      align-items: center;
       text-align: center;
       font-size: 10px;
     }
